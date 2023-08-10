@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<!-- <link rel="icon" type="image/png" href="http://bitly.ws/RsYy"> -->
+	<link rel="icon" type="image/png" href="images/idn.png">
+	<link rel="stylesheet" type="text/css" href="css/login2.css">
+</head>
+<body>
+	<div class="form-login">
+
+		<div class="brand">
+			<img src="images/idn.png" class="idn">
+		</div>
+		<h3>Task Apps</h3>
+
+		<form action="#">
+
+		<input placeholder="User ID" type="text" name="user_id">
+
+		<br>
+
+		<input placeholder="Password" type="password" name="password">
+
+		<p>
+			<a class="link-lupa-password" onclick="showForgotPasswordAlert()">Forgot Password</a>
+		</p>
+
+		<button type="submit" class="btn-login">Login</button>
+
+		</form>
+		<!-- <a href="#">
+			<button class="btn-regis">Daftar Akun</button>
+		</a>
+
+		<div class="divider"></div>
+
+		<a href="#">
+			<button class="btn-google">Masuk/Daftar</button>
+		</a> -->
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script>
+        function showForgotPasswordAlert() {
+            Swal.fire({
+                title: 'Lupa Password?',
+                text: 'Hubungi admin untuk dibantu dengan masalah ini.',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#2A3F54',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hubungi Admin',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Arahkan ke URL WhatsApp dengan pesan
+                    window.open('https://wa.me/6282191170349?text=Saya%20Lupa%20Password','_blank');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
